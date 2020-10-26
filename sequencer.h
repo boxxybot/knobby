@@ -16,7 +16,7 @@ void sequencer(){
     int bpm = midivals[SEQ1_BPM] + 1;
     bpm = bpm * 4;
     if (currentMicros - lastMicros1 >= round((60000/bpm)*1000)){
-      int _notes = midivals[SEQ1_EUCLIDIAN].length();
+      int _notes = euclid[midivals[SEQ1_EUCLIDIAN]].length();
       lastMicros1 = currentMicros;
       note1 = (note1 + 1) % 8;
       if (midivals[SEQ1_ENTRY + note1] != 0){
